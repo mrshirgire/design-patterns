@@ -11,6 +11,9 @@ public class TextEditor {
 
     public void write(String text) {
         this.content = text;
+    }
+
+    public void save() {
         TextMemento memento = new TextMemento(this.content);
         historyManager.saveHistory(memento);
     }
